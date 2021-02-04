@@ -1,0 +1,13 @@
+python -m venv venve
+
+.\venv\Scripts\activate
+
+python -m pip istall --upgrade
+
+cd prject name
+
+pip install -r requirements.txt
+
+python manage.py makemigrations
+
+python manage.py runserver

@@ -1,0 +1,14 @@
+pip install psycopg2
+
+open project settins:
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Track',                      
+        'USER': 'postgres',
+        'PASSWORD': '******',
+        'HOST': 'localhost',
+        '
+    }
+}

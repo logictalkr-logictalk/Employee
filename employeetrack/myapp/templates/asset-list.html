@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card-body">
+    <h4>Asset List</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Emp ID</th>
+                <th scope="col">Emp Name</th>
+                <th scope="col">Asset</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            {% for asset in assets %}
+            <tr>
+                <td>{{ asset.empid }}</td>
+                <td>{{ asset.empname }}</td>
+                <td>{{ asset.asset }}</td>
+                <td><a type="button" class="btn btn-warning" href="/asset-update/{{ asset.id }}">Update</a>
+                    <a type="button" class="btn btn-danger" href="/asset-delete/{{ asset.id }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a type="button" class="btn btn-success" href="{%url 'asset-create' %}">Create</a>
+</div>
+{% endblock %}
